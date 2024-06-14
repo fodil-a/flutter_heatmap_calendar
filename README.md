@@ -21,7 +21,7 @@ Add below line to your personal package's `pubspec.yaml`.
 
 ```yaml
 dependencies:
-  flutter_heatmap_calendar: ^1.0.5
+  flutter_heatmap_calendar: ^1.0.6
 ```
 
 And run `flutter pub get` to install.

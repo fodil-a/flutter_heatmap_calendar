@@ -87,6 +87,8 @@ class HeatMap extends StatefulWidget {
   /// The double value of [HeatMapColorTip]'s tip container's size.
   final double? colorTipSize;
 
+  final bool showWeeks;
+
   const HeatMap({
     Key? key,
     required this.colorsets,
@@ -102,6 +104,7 @@ class HeatMap extends StatefulWidget {
     this.datasets,
     this.defaultColor,
     this.showText = false,
+    this.showWeeks = true,
     this.showColorTip = true,
     this.scrollable = false,
     this.colorTipHelper,

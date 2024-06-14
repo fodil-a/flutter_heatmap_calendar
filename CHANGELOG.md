@@ -1,3 +1,7 @@
+## 1.0.6
+
+- feat: Add `showWeeks` flag that hides week labels.
+
 ## 1.0.5
 
 - feat: Created the `onMonthChange` callback on the `HeatMapCalendar`.
