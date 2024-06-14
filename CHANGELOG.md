@@ -1,3 +1,7 @@
+## 1.0.7
+
+- fix: Missed flag `showWeeks` plumbling.
+
 ## 1.0.6
 
 - feat: Add `showWeeks` flag that hides week labels.
