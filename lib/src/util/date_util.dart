@@ -1,47 +1,47 @@
 class DateUtil {
-  static const int DAYS_IN_WEEK = 7;
+  static const int daysInWeek = 7;
 
-  static const List<String> MONTH_LABEL = [
+  static const List<String> monthLabels = [
     '',
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December',
+    'Janvier',
+    'Février',
+    'Mars',
+    'Avril',
+    'Mai',
+    'Juin',
+    'Juillet',
+    'Août',
+    'Septembre',
+    'Octobre',
+    'Novembre',
+    'Décembre',
   ];
 
-  static const List<String> SHORT_MONTH_LABEL = [
+  static const List<String> shortMonthLabels = [
     '',
     'Jan',
-    'Feb',
+    'Fév',
     'Mar',
-    'Apr',
-    'May',
-    'Jun',
-    'Jul',
-    'Aug',
+    'Avr',
+    'Mai',
+    'Juin',
+    'Juil',
+    'Août',
     'Sep',
     'Oct',
     'Nov',
-    'Dec',
+    'Déc',
   ];
 
-  static const List<String> WEEK_LABEL = [
+  static const List<String> weekLabels = [
     '',
-    'Sun',
-    'Mon',
-    'Tue',
-    'Wed',
-    'Thu',
-    'Fri',
-    'Sat',
+    'Dimanche',
+    'Lundi',
+    'Mardi',
+    'Mercredi',
+    'Jeudi',
+    'Vendredi',
+    'Samedi',
   ];
 
   /// Get start day of month.
@@ -61,7 +61,7 @@ class DateUtil {
       final DateTime referenceDate) {
     DateTime _startDate = startDayOfMonth(referenceDate);
     DateTime _endDate = DateTime(_startDate.year, _startDate.month,
-        _startDate.day + DAYS_IN_WEEK - _startDate.weekday % DAYS_IN_WEEK - 1);
+        _startDate.day + daysInWeek - _startDate.weekday % daysInWeek - 1);
     DateTime _finalDate = endDayOfMonth(referenceDate);
     List<Map<DateTime, DateTime>> _savedMonth = [];
 
@@ -70,8 +70,8 @@ class DateUtil {
       _startDate = changeDay(_endDate, 1);
       _endDate = changeDay(
           _endDate,
-          endDayOfMonth(_endDate).day - _startDate.day >= DAYS_IN_WEEK
-              ? DAYS_IN_WEEK
+          endDayOfMonth(_endDate).day - _startDate.day >= daysInWeek
+              ? daysInWeek
               : endDayOfMonth(_endDate).day - _startDate.day + 1);
     }
     return _savedMonth;

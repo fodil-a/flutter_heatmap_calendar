@@ -46,14 +46,16 @@ class HeatMapMonthText extends StatelessWidget {
         // Add Text without width margin if first week is end of the month.
         // Otherwise, add Text with width margin.
         items.add(
-          firstDayInfos!.length == 1 || (label == 0 && firstDayInfos![label] != firstDayInfos![label + 1])
-              ? _renderText(DateUtil.SHORT_MONTH_LABEL[firstDayInfos![label]])
+          firstDayInfos!.length == 1 ||
+                  (label == 0 &&
+                      firstDayInfos![label] != firstDayInfos![label + 1])
+              ? _renderText(DateUtil.shortMonthLabels[firstDayInfos![label]])
               : Container(
                   width: (((size ?? 20) + (margin?.right ?? 2)) * 2),
                   margin: EdgeInsets.only(
                       left: margin?.left ?? 2, right: margin?.right ?? 2),
                   child: _renderText(
-                      DateUtil.SHORT_MONTH_LABEL[firstDayInfos![label]]),
+                      DateUtil.shortMonthLabels[firstDayInfos![label]]),
                 ),
         );
       } else if (_write) {

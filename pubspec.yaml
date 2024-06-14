@@ -1,10 +1,10 @@
-name: flutter_heatmap_calendar
-description: Flutter heatmap calendar inspired by github contribution chart which includes traditional mode / calendar mode.
+name: flutter_heatmap_calendar_fr
+description: Just forked flutter_heatmap_calendar to make it french
 version: 1.0.5
-homepage: https://github.com/devappmin/flutter_heatmap_calendar
+homepage: https://github.com/fodil-a/flutter_heatmap_calendar
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: '>=2.12.0 <4.0.0'
   flutter: ">=1.17.0"
 
 dependencies:
